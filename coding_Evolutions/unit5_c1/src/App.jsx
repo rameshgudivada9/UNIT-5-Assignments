@@ -3,11 +3,11 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(76);
 
-  const [wicket, setWicket] = useState(0)
+  const [wicket, setWicket] = useState(2)
   
-  const [over, setOver] = useState(0.0);
+  const [over, setOver] = useState(50);
 
   if(score>100){
     var ans="INDIA WIN"
