@@ -123,6 +123,42 @@
       "preferred_branch": "sports",
       "male": "gender",
       "id": 11
+    },
+    {
+      "first_name": "Gudivada",
+      "last_name": "RAMESH",
+      "email": "rameshgudivada9@gmail.com",
+      "gender": "",
+      "age": "33",
+      "tenth_score": "34",
+      "twelth_score": "34",
+      "preferred_branch": "sports",
+      "male": "male",
+      "id": 12
+    },
+    {
+      "first_name": "Gudivada",
+      "last_name": "RAMESH",
+      "email": "rameshgudivada9@gmail.com",
+      "gender": "",
+      "age": "33",
+      "tenth_score": "34",
+      "twelth_score": "34",
+      "preferred_branch": "sports",
+      "male": "male",
+      "id": 13
+    },
+    {
+      "first_name": "lasr",
+      "last_name": "one",
+      "email": "fun@gmail.com",
+      "gender": "",
+      "age": "13",
+      "tenth_score": "500",
+      "twelth_score": "600",
+      "preferred_branch": "sports",
+      "male": "male",
+      "id": 14
     }
   ]
 }
