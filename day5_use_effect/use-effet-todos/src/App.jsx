@@ -1,16 +1,16 @@
 import './App.css';
-import {useState} from "react";
+import {useState,useEffect} from "react";
 import {Todo} from "./components/Todo"
 function App() {
 
-const [show,setShow]=useState(true)
+  const [todos,setTodos]=useState([]);
+
+fetch("http://localhost:8080/todos").then(d=>d.json()).then((data)=>{(console.log(data))})
+
 
   return (
     <div className="App">
-       {show?<Todo/>:null}
-       <button onClick={()=>{
-         setShow(!show)
-       }}>DELETE</button>
+     {todos.map(todo=><div>{todo.title}</div>)}
     </div>
   );
 }
