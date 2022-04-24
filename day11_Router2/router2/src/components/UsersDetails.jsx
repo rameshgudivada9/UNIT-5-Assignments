@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router"
+import { useParams } from "react-router";
 
 
 export const UsersDetails=()=>{
@@ -14,6 +14,9 @@ export const UsersDetails=()=>{
             setUser(data.data);
         })
     },[]);
+
+
+
 
 return (
 <div> 
