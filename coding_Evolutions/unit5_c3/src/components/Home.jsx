@@ -1,5 +1,7 @@
-import axios from "axios";
+
+
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Home = () => {
     // create statistics for user.
@@ -13,21 +15,24 @@ export const Home = () => {
     //   terminated: 0, // inc when user in terminated
     //   promoted: 0,// inc when user in promoted
     //   total_new: 0,// inc when a new user in created
-
-    const [totalemploy,setTotalEmploy]=useState(0);
-
-    useEffect(()=>{
-      const {data} =await axios ("http://localhost:8080/employee");
-      setTotalEmploy(data.length);
-    });
   
+    const [totalemploy , setTotalemploy] = useState(10);
+
+    useEffect(() =>{
+      fetachEmpTotal(); 
+    },[]);
+
+    const fetachEmpTotal = async () => {
+      const {data} = await axios ("http://localhost:8080/employee");
+      setTotalemploy(data.length);
+    };
     return (
       <>
         <h3 className="welcome">Welcome To employee management system</h3>
         <div className="home">
           <span>Stats</span>
           <div>
-            Total Employees:<span className="totalemp"></span>
+            Total Employees:<span className="totalemp">{totalemploy}</span>
           </div>
           <div>
             Total Terminated: <span className="total_terminated"></span>
@@ -42,4 +47,3 @@ export const Home = () => {
       </>
     );
   };
-  
