@@ -1,3 +1,6 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 export const Home = () => {
     // create statistics for user.
     // get Total user count from DB,
@@ -10,6 +13,13 @@ export const Home = () => {
     //   terminated: 0, // inc when user in terminated
     //   promoted: 0,// inc when user in promoted
     //   total_new: 0,// inc when a new user in created
+
+    const [totalemploy,setTotalEmploy]=useState(0);
+
+    useEffect(()=>{
+      const {data} =await axios ("http://localhost:8080/employee");
+      setTotalEmploy(data.length);
+    });
   
     return (
       <>
