@@ -27,7 +27,7 @@ export const Home = () => {
         <div className="home">
           <span>Stats</span>
           <div>
-            Total Employees<span className="totalemp"></span>
+            Total Employees:<span className="totalemp"></span>
           </div>
           <div>
             Total Terminated: <span className="total_terminated"></span>
