@@ -2,7 +2,16 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 	return (
-		<div className='navbar'>
+		<div className='navbar' style={{
+			display:"flex",
+			justifyContent:"space-between",
+			border:"1px solid red",
+			padding:"10px",
+			fontSize:"25px",
+			margin:"10px"
+	
+		
+		}}>
 			<Link className='nav-home' to='/'>
 				Home
 			</Link>
