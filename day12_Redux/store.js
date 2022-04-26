@@ -2,7 +2,18 @@ import { legacy_createStore as createStore} from "redux";
 
 
 
-const reducer=(store,action)=>{
+const addTodo=(title)=>{
+    return {
+        type:"ADD_TODO",
+        payload:{
+            title:title,
+            status:false,
+        }
+        
+    }
+}
+
+ const reducer=(store,action)=>{
 
     switch(action.type){
 
@@ -17,6 +28,9 @@ const reducer=(store,action)=>{
 
 
     }
+}
+
+
     
     // if(action.type==="ADD_COUNT"){
     //     return {...store,counter:store.counter+action.payload}
@@ -27,7 +41,7 @@ const reducer=(store,action)=>{
     // }
     // return store;
     
-}
+
 
 const initState={
     counter:0,
@@ -42,9 +56,14 @@ console.log(store.getState())
 
 store.dispatch({type:"ADD_COUNT",payload:1})
 
-store.dispatch({type:"ADD_TODO",payload:{title:"learn redux",status:false}})
+store.dispatch(addTodo("learn redux"))
 
-store.dispatch({type:"ADD_TODO",payload:{title:"learn typescript",status:false}})
+// store.dispatch({type:"ADD_TODO",payload:{title:"learn redux",status:false}})
+
+store.dispatch(addTodo("learn typescript"))
+
+
+// store.dispatch({type:"ADD_TODO",payload:{title:"learn typescript",status:false}})
 
 
 
